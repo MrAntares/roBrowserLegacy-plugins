@@ -5,7 +5,7 @@ Plugin repository for [Ragna.roBrowser](https://github.com/MrAntares/Ragna.roBro
 * Copy any plugin folder from `src/Plugins/` into the same folder in Ragna.roBrowser
 * Add the plugin (or plugins) to the plugin list in Ragna.roBrowser's ROConfig, separated with comma as:
 
- `<Plugin_name>: '<Path_under_src>'`
+ `<Plugin_name>: '<Path_to_the_plugin_javascript_under_src_without_the_.js_extension>'`
  
  Example:
 ```js
