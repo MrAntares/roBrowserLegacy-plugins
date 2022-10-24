@@ -69,7 +69,7 @@ define(function( require )
 	function checkPosSub( coord ){
 		if(!isNaN(coord)){
 			var remainder = coord % 40;
-			return (remainder > 5 && remainder < 35);
+			return (remainder > 4);
 		}
 		return false;
 	}
