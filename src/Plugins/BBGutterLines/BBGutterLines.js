@@ -39,7 +39,12 @@ define(function( require )
 							if(!checkPosition([x, y])){
 								var AID = C_EFFECT_AID_PREFIX + (index++);
 								var alt = Altitude.getCellHeight(  x,  y );
-								EffectManager.spam(C_EFFECT_ID, AID, [x, y, alt ]);
+								EF_Init_Param = {
+									effectId: C_EFFECT_ID,
+									ownerAID: AID,
+									position: [x, y, alt ]
+								};
+								EffectManager.spam( EF_Init_Param );
 							}
 						}
 					}
@@ -54,7 +59,7 @@ define(function( require )
 			if(_maxIndex){
 				for(var i = 0; i < _maxIndex; i++){
 					var AID = C_EFFECT_AID_PREFIX + i;
-					EffectManager.remove(null, AID);
+					EffectManager.remove(null, AID, C_EFFECT_ID);
 				}
 			}
 		}
@@ -69,7 +74,7 @@ define(function( require )
 	function checkPosSub( coord ){
 		if(!isNaN(coord)){
 			var remainder = coord % 40;
-			return (remainder > 4);
+			return (remainder > 5);
 		}
 		return false;
 	}
