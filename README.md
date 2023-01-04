@@ -1,5 +1,5 @@
 # Ragna.roBrowser-plugins
-Plugin repository for [Ragna.roBrowser](https://github.com/MrAntares/Ragna.roBrowser)
+Plugin repository for [roBrowserLegacy](https://github.com/MrAntares/roBrowserLegacy)
 
 ## How to install plugins
 * Copy any plugin folder from `src/Plugins/` into the same folder in Ragna.roBrowser
