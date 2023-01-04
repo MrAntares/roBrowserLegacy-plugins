@@ -1,4 +1,4 @@
-# Ragna.roBrowser-plugins
+# roBrowserLegacy-plugins
 Plugin repository for [roBrowserLegacy](https://github.com/MrAntares/roBrowserLegacy)
 
 ## How to install plugins
