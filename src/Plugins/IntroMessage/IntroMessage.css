@@ -1,0 +1,15 @@
+#IntroMessage  {width: 100%;position:absolute;top:50%;margin-top:-151px; }
+#IntroMessage .main {width:380px; height:296px;margin: 0 auto;border-radius:8px; background:rgba(255,255,255,0.95); padding:3px; line-height:18px; letter-spacing:0px; }
+#IntroMessage .border {position: relative;border:1px solid #ccc; height:284px; padding:5px; border-radius:5px; }
+#IntroMessage .content { /*white-space:pre-wrap;*/ height:246px; overflow-y:auto; padding:5px;line-height: 21px;background: #F7F7F7; }
+#IntroMessage .content .news{margin: 5px 0;}
+#IntroMessage .content .news br{display:none;}
+#IntroMessage .content .news .new{margin: 5px 0 0 0;}
+#IntroMessage .content p { text-indent: 2em;line-height: 24px;}
+#IntroMessage .content h1 { font-size:14px; font-weight:bold; color:#154768;}
+#IntroMessage .content h2 { font-size: 13px;color:#154768;}
+#IntroMessage .content h3 { font-size: 12px;color:#154768;}
+#IntroMessage .content .warning { color:#A00; }
+#IntroMessage .btns { position:absolute; bottom: 4px; right:4px; }
+#IntroMessage .btn { width:48px; height:23px;border-radius: 4px;border: solid 1px #999;background: linear-gradient(to bottom, rgba(255, 255, 255, 1.0) 30%, rgba(230, 230, 230, 1.0) 100%);box-shadow: 0px 0px 2px #ccc;font-size: 12px; }
+#IntroMessage .btn:hover{background:linear-gradient(to top, rgba(255, 255, 255, 1.0) 30%, rgba(230, 230, 230, 1.0) 100%)}
