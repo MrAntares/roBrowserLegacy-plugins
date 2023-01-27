@@ -2,7 +2,7 @@
 Plugin repository for [roBrowserLegacy](https://github.com/MrAntares/roBrowserLegacy)
 
 ## How to install plugins
-* Copy any plugin folder from `src/Plugins/` into the `src/Plugins/` folder in roBrowser (where PluginManager.js is located)
+* Copy any plugin folder from `src/Plugins/` into the `src/Plugins/` folder in roBrowser (where `PluginManager.js` is located)
 * Add the plugin (or plugins) to the plugin list in Ragna.roBrowser's ROConfig, separated with comma as:
 
  `<Plugin_name>: '<Path_to_the_plugin_javascript_under_src_without_the_.js_extension>'`
