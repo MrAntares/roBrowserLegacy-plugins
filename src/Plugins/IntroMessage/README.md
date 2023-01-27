@@ -11,8 +11,8 @@
 
 ```
 <h1>Welcome to RoBrowser</h1> 
-<p class="warning">This is a Warning paragraph!</p>
-<p>This is a normal paragraph</p>
+<p class="warning">This is a Warning paragraph! Warn players about something important here if you want! A warning paragraph must contain class="warning" in it's opening P tag </p>
+<p>This is a normal paragraph detailing something general information that everyone should know.</p>
 
 <div class="news">
 	<h3 class="new" data-id="3">2023.01.27</h3><p>Another news paragraph detailing something exciting new thing</p>
