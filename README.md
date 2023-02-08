@@ -7,17 +7,21 @@ Plugin repository for [roBrowserLegacy](https://github.com/MrAntares/roBrowserLe
 
  `<Plugin_name>: '<Path_to_the_plugin_javascript_under_src_without_the_.js_extension>'`
  
- Example with all current plugins (only add what you need, the "..." is not part of the code):
+ Example with all current plugins (only add what you need):
 ```js
 function initialize() {
       var ROConfig = {
-          ...
+      
+          //... other RoConf properties here
+          
           plugins: { 
                       KeyToMove: 'KeyToMove/KeyToMove',
                       BBGutterLines: 'BBGutterLines/BBGutterLines',
                       IntroMessage: { path:'IntroMessage/IntroMessage', pars: { newsUrl: 'https://example.com' } }
                    },
-          ...
+                   
+          //... other RoConf properties here
+          
       };
       var RO = new ROBrowser(ROConfig);
       RO.start();
