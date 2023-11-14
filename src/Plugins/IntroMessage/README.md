@@ -20,3 +20,5 @@
 	<h3 class="new" data-id="1">2023.01.24</h3><p>News page added</p>
 </div>
 ```
+## Installing
+Please use the main [plugin guide](https://github.com/MrAntares/roBrowserLegacy-plugins#readme)
