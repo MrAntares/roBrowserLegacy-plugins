@@ -34,11 +34,11 @@ define(function( require )
 	};
 	
 	//Multiple keys held
-	var keysDown = {};
+	var KeyEvent = {};
 	
 	//Memory
 	var targetPos = [0, 0];
-	var keysDownTimeout;
+	var keysDownTimeout = null;
 
 	//---- Now the job ----
 	function processKeyDownEvent( event ) {
@@ -56,8 +56,7 @@ define(function( require )
 			
 			if(Session.Playing && Session.Entity){
 				event.stopImmediatePropagation();
-				
-				keysDown[event.which] = true;
+				KeyEvent[event.which] = { pressed: true, continuous: event.originalEvent.repeat };
 				processKeysDown();
 				return false;
 			}
@@ -72,24 +71,24 @@ define(function( require )
 	
 	function processKeyUpEvent( event ) {
 		if (event.which === MOVE.RIGHT || event.which === MOVE.LEFT || event.which === MOVE.UP || event.which === MOVE.DOWN) {
-			delete keysDown[event.which];
+			delete KeyEvent[event.which];
 		}
 	}
 	
 	function processKeysDown(){
 		clearTimeout(keysDownTimeout);
 		
-		if(Session.Entity && Object.keys(keysDown).length > 0){
-			
+		if(Session.Entity && Object.keys(KeyEvent).length > 0){
+
 			direction[0] = 0;
 			direction[1] = 0;
 			
 			// Get direction from keyboard
-			direction[0] += (keysDown[MOVE.RIGHT] ? +1 : 0);
-			direction[0] += (keysDown[MOVE.LEFT]  ? -1 : 0);
+			if( KeyEvent[MOVE.RIGHT] && KeyEvent[MOVE.RIGHT].pressed ) direction[0] += ( KeyEvent[MOVE.RIGHT].continuous ? 3 : 1 );
+			if( KeyEvent[MOVE.LEFT] && KeyEvent[MOVE.LEFT].pressed ) direction[0] -= ( KeyEvent[MOVE.LEFT].continuous ? 3 : 1 );
 
-			direction[1] += (keysDown[MOVE.UP]    ? +1 : 0);
-			direction[1] += (keysDown[MOVE.DOWN]  ? -1 : 0);
+			if( KeyEvent[MOVE.UP] && KeyEvent[MOVE.UP].pressed ) direction[1] += ( KeyEvent[MOVE.UP].continuous ? 3 : 1 );
+			if( KeyEvent[MOVE.DOWN] && KeyEvent[MOVE.DOWN].pressed ) direction[1] -= ( KeyEvent[MOVE.DOWN].continuous ? 3 : 1 );
 
 			// Initialize matrix, based on Camera direction
 			mat2.identity(rotate);
@@ -113,7 +112,7 @@ define(function( require )
 				Network.sendPacket(pkt);
 			}
 			
-			keysDownTimeout = setTimeout(processKeysDown, 10);
+			keysDownTimeout = setTimeout(processKeysDown, 100);
 		}
 	}
 
