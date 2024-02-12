@@ -14,9 +14,6 @@
 define(function( require )
 {
 	'use strict';
-	
-	var NEWS_URL = "";
-
 
 	/**
 	 * Load dependencies
@@ -57,16 +54,6 @@ define(function( require )
 
 	IntroMessage.init = function(){
 		this.draggable();
-		jQuery.ajax({
-			url: NEWS_URL,
-			type: 'post',
-			success: function (data) {
-				if(data){
-					jQuery('#IntroMessage .content').empty();
-					jQuery('#IntroMessage .content').append(data);
-				}
-			}
-		 });
 
 		this.ui.find('.ok').click(function(){
 			IntroMessage.remove();
@@ -88,7 +75,17 @@ define(function( require )
 	return function Init(pars)
 	{
 		if(pars && pars.newsUrl){
-			NEWS_URL = pars.newsUrl;
+			jQuery.ajax({
+				url: pars.newsUrl,
+				type: 'post',
+				success: function (data) {
+					if(data){
+						jQuery('#IntroMessage .content').empty();
+						jQuery('#IntroMessage .content').append(data);
+					}
+				}
+			});
+			
 			WinLogin.getUI().onAppend = appendIntroMessage;
 			return true;
 		} else {
