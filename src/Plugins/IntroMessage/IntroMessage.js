@@ -39,7 +39,11 @@ define(function( require )
 	/**
 	 * Save old function
 	 */
-	var onAppend = WinLogin.onAppend;
+	
+	//UI Version management
+	WinLogin.selectUIVersion();
+	
+	var onAppend = WinLogin.getUI().onAppend;
 
 
 	IntroMessage.onAppend = function(){
@@ -66,9 +70,15 @@ define(function( require )
 
 		this.ui.find('.ok').click(function(){
 			IntroMessage.remove();
-			WinLogin.onAppend = onAppend;
-			WinLogin.append();
+			WinLogin.getUI().onAppend = onAppend;
+			WinLogin.getUI().append();
+			WinLogin.getUI().onAppend = appendIntroMessage;
 		});
+	};
+	
+	function appendIntroMessage(){
+		WinLogin.getUI().remove();
+		IntroMessage.append();
 	};
 
 
@@ -79,10 +89,7 @@ define(function( require )
 	{
 		if(pars && pars.newsUrl){
 			NEWS_URL = pars.newsUrl;
-			WinLogin.onAppend = function(){
-				WinLogin.remove();
-				IntroMessage.append();
-			};
+			WinLogin.getUI().onAppend = appendIntroMessage;
 			return true;
 		} else {
 			console.warn("[IntroMessage Plugin] newsUrl param is missing. Please review your RoBrowser configuration and provide the required values!\r\n[IntroMessage: { path:'<plugin path>', pars: { newsUrl: '<news url>' } }]");
