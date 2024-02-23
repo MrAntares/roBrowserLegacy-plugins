@@ -1,0 +1,1 @@
+Plugin showing how to override version of UI component
