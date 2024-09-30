@@ -11,10 +11,10 @@ define(function( require )
 {
     // Dependencies
     var Preferences = require('Core/Preferences');
-	var Audio = require('Preferences/Audio');
-	var Map = require('Preferences/Map');
+    var Audio = require('Preferences/Audio');
+    var Map = require('Preferences/Map');
 
-	return function Init(){
+    return function Init(){
         // Audio preferences
         const customAudio = Preferences.get( 'Audio', {
             BGM:   {
@@ -34,6 +34,6 @@ define(function( require )
         Map.fog = customMap.fog;
 
         // Return true to signal successful initialization
-		return true;
-	}
+        return true;
+    }
 });
