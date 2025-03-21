@@ -77,7 +77,7 @@ define(function( require )
 		if(pars && pars.newsUrl){
 			jQuery.ajax({
 				url: pars.newsUrl,
-				type: 'post',
+				type: 'get',
 				success: function (data) {
 					if(data){
 						jQuery('#IntroMessage .content').empty();
