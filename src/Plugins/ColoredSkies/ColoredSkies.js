@@ -265,7 +265,7 @@ define(function( require )
 		// Lou
 		sky['lou_fild01.rsw'] =
 		sky['lou_dun01.rsw'] =
-		sky['louyang.rsw'] = skycolors.normal;
+		sky['louyang.rsw'] = skycolors.sunset;
 		
 		// Ayo
 		sky['ayo_fild01.rsw'] =
@@ -336,3 +336,4 @@ define(function( require )
         return true;
     }
 });
+
