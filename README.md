@@ -15,9 +15,12 @@ function initialize() {
           //... other RoConf properties here
           
           plugins: { 
-                      KeyToMove: 'KeyToMove/KeyToMove',
                       BBGutterLines: 'BBGutterLines/BBGutterLines',
-                      IntroMessage: { path:'IntroMessage/IntroMessage', pars: { newsUrl: 'https://example.com' } }
+                      ColoredSkies: 'ColoredSkies/ColoredSkies',
+                      DefaultSettings: 'DefaultSettings/DefaultSettings', // Only example, customize source at your will
+                      IntroMessage: { path:'IntroMessage/IntroMessage', pars: { newsUrl: 'https://example.com' } },
+                      KeyToMove: 'KeyToMove/KeyToMove',
+                      UISelectionPlugin: 'UISelectionPlugin/UISelectionPlugin', // Only example, customize source at your will
                    },
                    
           //... other RoConf properties here
