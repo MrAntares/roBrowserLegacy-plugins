@@ -27,6 +27,7 @@ define(function( require )
 			overcastsunset: { skyColor:[0.75, 0.7, 0.7, 1.0], cloudColor: false }, 
 			desert: { skyColor:[0.96, 0.95, 0.85, 1.0], cloudColor: false },
 			desertsunset: { skyColor:[0.71, 0.66, 0.7, 1.0], cloudColor: false },
+			night: { skyColor:[0.15, 0.14, 0.32, 1.0], cloudColor: false },
 			
 			// Specials for other dimensions
 			special0: { skyColor:[0.28, 0.21, 0.29, 1.0], cloudColor: false },
@@ -226,6 +227,8 @@ define(function( require )
 		sky['moc_fild20.rsw'] = 
 		sky['moc_fild21.rsw'] = 
 		sky['moc_fild22.rsw'] = 
+		sky['moc_fild22a.rsw'] = 
+		sky['moc_fild22b.rsw'] = 
 		sky['moc_ruins.rsw'] = 
 		sky['morocc.rsw'] = skycolors.desert;
 		
@@ -239,6 +242,7 @@ define(function( require )
 		sky['cmd_fild07.rsw'] = 
 		sky['cmd_fild08.rsw'] = 
 		sky['cmd_fild09.rsw'] = skycolors.normal;
+		sky['comodo.rsw'] = skycolors.night;
 		
 		// Umbala
 		sky['um_fild01.rsw'] = 
@@ -251,6 +255,13 @@ define(function( require )
 		sky['niflheim.rsw'] = 
 		sky['nif_fild01.rsw'] = 
 		sky['nif_fild02.rsw'] = skycolors.special0;
+
+		// Xmas
+		sky['xmas.rsw'] =
+		sky['xmas_fild01.rsw'] = skycolors.overcast;
+
+		// Jawaii
+		sky['jawaii.rsw'] = skycolors.normal;
 		
 		// Nameless
 		sky['nameless_n.rsw'] = skycolors.overcast;
@@ -305,7 +316,7 @@ define(function( require )
 		sky['splendide.rsw'] =
 		sky['spl_fild01.rsw'] =
 		sky['spl_fild02.rsw'] =
-		sky['spl_fild02.rsw'] = skycolors.special2;
+		sky['spl_fild03.rsw'] = skycolors.special2;
 		
 		// Camp
 		sky['mid_camp.rsw'] = skycolors.special1;
@@ -321,6 +332,31 @@ define(function( require )
 		sky['dicastes01.rsw'] =
 		sky['dic_fild01.rsw'] =
 		sky['dic_fild02.rsw'] = skycolors.special5;
+
+		// Malangdo
+		sky['malangdo.rsw'] = skycolors.normal;
+
+		// Lasagna
+		sky['lasagna.rsw'] =
+		sky['lasa_fild01.rsw'] =
+		sky['lasa_fild02.rsw'] = skycolors.normal;
+
+		// Issgard
+		sky['icecastle.rsw'] =
+		sky['jor_back1.rsw'] =
+		sky['jor_back2.rsw'] =
+		sky['jor_back3.rsw'] =
+		sky['jor_tail.rsw'] = skycolors.overcast;
+
+		// Wolf village
+		sky['wolfvill.rsw'] =
+		sky['gw_fild01.rsw'] =
+		sky['gw_fild02.rsw'] = skycolors.desert;
+		
+		// Rock ridge
+		sky['harboro1.rsw'] =
+		sky['rockrdg1.rsw'] =
+		sky['rockrdg2.rsw'] = skycolors.desert;
 		
 		return true;
 	}
@@ -336,4 +372,5 @@ define(function( require )
         return true;
     }
 });
+
 
