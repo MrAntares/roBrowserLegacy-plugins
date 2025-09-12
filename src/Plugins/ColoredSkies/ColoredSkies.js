@@ -258,7 +258,7 @@ define(function( require )
 
 		// Xmas
 		sky['xmas.rsw'] =
-		sky['xmas_fild01.rsw'] = skycolors.overcast;
+		sky['xmas_fild01.rsw'] = skycolors.night;
 
 		// Jawaii
 		sky['jawaii.rsw'] = skycolors.normal;
@@ -372,5 +372,6 @@ define(function( require )
         return true;
     }
 });
+
 
 
