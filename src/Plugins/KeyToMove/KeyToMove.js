@@ -56,7 +56,7 @@ define(function( require )
 			
 			if(Session.Playing && Session.Entity){
 				event.stopImmediatePropagation();
-				KeyEvent[event.which] = { pressed: true, continuous: event.originalEvent.repeat };
+				KeyEvent[event.which] = { pressed: true, continuous: event.originalEvent && event.originalEvent.repeat };
 				processKeysDown();
 				return false;
 			}
