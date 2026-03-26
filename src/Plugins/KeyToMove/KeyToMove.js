@@ -55,10 +55,14 @@ define(function( require )
 			}
 			
 			if(Session.Playing && Session.Entity){
-				event.stopImmediatePropagation();
-				KeyEvent[event.which] = { pressed: true, continuous: event.originalEvent && event.originalEvent.repeat };
-				processKeysDown();
-				return false;
+				var gamepads = navigator.getGamepads ? navigator.getGamepads() : [];
+				if(!(Array.from(gamepads).some(
+					gp => gp?.buttons?.slice(12, 16).some(b => b.pressed)))){
+						event.stopImmediatePropagation();
+						KeyEvent[event.which] = { pressed: true, continuous: event.originalEvent && event.originalEvent.repeat };
+						processKeysDown();
+						return false;
+				}
 			}
 			
 			// Skip
