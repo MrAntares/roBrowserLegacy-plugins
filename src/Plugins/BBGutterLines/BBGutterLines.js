@@ -38,7 +38,7 @@ function showGutterLines(self, args){
 						if(!checkPosition([x, y])){
 							let AID = C_EFFECT_AID_PREFIX + (index++);
 							let alt = Altitude.getCellHeight(  x,  y );
-							EF_Init_Param = {
+							let EF_Init_Param = {
 								effectId: C_EFFECT_ID,
 								ownerAID: AID,
 								position: [x, y, alt ]
