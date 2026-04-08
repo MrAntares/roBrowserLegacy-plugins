@@ -2,7 +2,7 @@
 Plugin repository for [roBrowserLegacy](https://github.com/MrAntares/roBrowserLegacy)
 
 > [!WARNING]
-> Currently, plugins are only compatible with roBrowser hash [dbea5376545fbc74601c2ff5551e7433f9a787c2](https://github.com/MrAntares/roBrowserLegacy/commit/dbea5376545fbc74601c2ff5551e7433f9a787c2) and below. Since then the core project has transitioned to ES6 and the plugin engine will be reworked. Plugins will also be updated once the core transition/rewrite is complete.
+> ES6 plugins are only compatible with roBrowser hash [82ae880cff59ccc2262f706f104f55c124254f95](https://github.com/MrAntares/roBrowserLegacy/commit/82ae880cff59ccc2262f706f104f55c124254f95) and newer.
 
 ## How to install plugins
 * Copy any plugin folder from `src/Plugins/` into the `src/Plugins/` folder in roBrowser (where `PluginManager.js` is located)
