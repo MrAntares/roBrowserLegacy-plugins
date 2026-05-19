@@ -4,6 +4,10 @@ Plugin repository for [roBrowserLegacy](https://github.com/MrAntares/roBrowserLe
 > [!WARNING]
 > ES6 plugins are only compatible with roBrowser hash [82ae880cff59ccc2262f706f104f55c124254f95](https://github.com/MrAntares/roBrowserLegacy/commit/82ae880cff59ccc2262f706f104f55c124254f95) and newer.
 
+## Wiki
+
+[![Ask DeepWiki](https://deepwiki.com/badge.svg)](https://deepwiki.com/MrAntares/roBrowserLegacy-plugins)
+
 ## How to install plugins
 * Copy any plugin folder from `src/Plugins/` into the `src/Plugins/` folder in roBrowser (where `PluginManager.js` is located)
 * Add the plugin (or plugins) to the plugin list in roBrowser's ROConfig, separated with comma as:
